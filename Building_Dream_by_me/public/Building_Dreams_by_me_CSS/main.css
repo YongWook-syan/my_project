@@ -1,0 +1,268 @@
+/* 전체 요소에 대한 기본 스타일을 초기화합니다. */
+*{
+  margin: 0; /* 모든 외부 여백을 0으로 설정합니다. */
+  padding: 0; /* 모든 내부 여백을 0으로 설정합니다. */
+  box-sizing: border-box; /* 패딩과 보더가 요소의 전체 너비와 높이에 포함되도록 설정합니다. */
+}
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* 헤더 섹션의 스타일입니다. */
+header {
+  padding: 10px 20px;   /* 상하 10px, 좌우 20px의 내부 여백을 설정합니다. */
+  background-color: #dcdcdc;   /* 배경색을 회색으로 설정합니다 (HSL 색상 코드 사용). */
+  display: flex;   /* 자식 요소들을 플렉스 박스 레이아웃으로 배치합니다. */
+  justify-content: space-between;   /* 자식 요소들을 양 끝으로 정렬하고 그 사이에 공간을 균등하게 배분합니다. */
+  align-items: center;   /* 자식 요소들을 교차 축(수직) 중앙에 정렬합니다. */
+  border-bottom: 1px solid #bbb;   /* 아래쪽에 1px 두께의 회색 실선 테두리를 추가합니다. */
+  margin-bottom: 20px;   /* 아래쪽에 20px의 외부 여백을 추가합니다. */
+}
+
+/* 로고 섹션의 스타일입니다. */
+#logo{
+  float: left; /* 요소를 왼쪽으로 띄워 다른 요소들이 주위를 감싸도록 합니다. */
+  width: 250px; /* 너비를 250px로 설정합니다. */
+  height: 100px; /* 높이를 100px로 설정합니다. */
+  line-height: 100px; /* 줄 높이를 100px로 설정하여 텍스트를 수직 중앙에 배치합니다. */
+  padding-left: 20px; /* 왼쪽에 20px의 내부 여백을 추가합니다. */
+}
+/* 로고 링크 (a)의 스타일입니다. */
+#logo a{
+  text-decoration: none; /* 링크의 밑줄을 제거합니다. */
+  color: inherit; /* 부모 요소의 글자색을 상속받습니다. */
+}
+#logo h1 {
+  color: #333;
+}
+
+/* 푸터 섹션의 스타일입니다. */
+footer{
+  width: 100%; /* 너비를 부모 요소의 100%로 설정합니다. */
+  height: 100px; /* 높이를 100px로 설정합니다. */
+  /* background-color: hsl(0, 0%, 50%); */ /* 주석 처리됨: 배경색을 회색으로 설정 (HSL 색상 코드 사용). */
+  border-top: 2px solid hsl(0, 0%, 10%); /* 위쪽에 2px 두께의 매우 어두운 회색 실선 테두리를 추가합니다. */
+}
+
+/* 하단 메뉴 컨테이너의 스타일입니다. */
+#bottomMenu{
+  width: 100%; /* 너비를 부모 요소의 100%로 설정합니다. */
+  height: 20px; /* 높이를 20px로 설정합니다. */
+  position: relative; /* 자식 요소들의 절대 위치 지정을 위한 기준점을 설정합니다. */
+}
+
+/* 하단 메뉴 목록 (ul)의 스타일입니다. */
+#bottomMenu ul{
+  margin-top: 15px; /* 위쪽에 15px의 외부 여백을 추가합니다. */
+}
+
+/* 하단 메뉴 목록 항목 (li)의 스타일입니다. */
+#bottomMenu ul li{
+  float: left; /* 요소를 왼쪽으로 띄워 가로로 배치합니다. */
+  padding: 5px 20px; /* 상하 5px, 좌우 20px의 내부 여백을 설정합니다. */
+  border-right: 1px solid hsl(0, 0%, 80%); /* 항목 오른쪽에 1px 두께의 밝은 회색 실선 테두리를 추가하여 구분선을 만듭니다. */
+  list-style: none; /* 목록 앞에 붙는 마커(점, 숫자 등)를 제거합니다. */
+}
+
+/* 하단 메뉴 목록의 마지막 항목에는 오른쪽 테두리를 제거합니다. */
+#bottomMenu ul li:last-child{
+  border-right: none; /* 마지막 항목의 오른쪽 테두리를 제거합니다. */
+}
+
+/* 하단 메뉴 링크 (a) 및 방문한 링크 (a:visited)의 스타일입니다. */
+#bottomMenu ul li a, #bottomMenu ul li a:visited{
+  text-decoration: none;
+  color: hsl(0, 0%, 40%); /* 글자색을 어두운 회색으로 설정합니다 (HSL 색상 코드 사용). */
+}
+
+/* SNS 섹션의 스타일입니다. */
+#sns{
+  position: absolute; /* 요소를 절대 위치로 지정합니다. */
+  right: 0; /* 부모 요소의 오른쪽 끝에 정렬합니다. */
+}
+
+/* SNS 목록 항목 (li)의 스타일입니다. */
+#sns ul li{
+  border: none; /* 테두리를 제거합니다. */
+  padding: 5px; /* 모든 방향으로 5px의 내부 여백을 추가합니다. */
+}
+
+/* 회사 정보 섹션의 스타일입니다. */
+#company{
+  clear: left; /* float된 왼쪽 요소들의 영향을 받지 않도록 합니다. */
+  margin-top: 25px; /* 위쪽에 25px의 외부 여백을 추가합니다. */
+  margin-left: 20px; /* 왼쪽에 20px의 외부 여백을 추가합니다. */
+}
+#Ending-greeting{
+  clear: left; /* float된 왼쪽 요소들의 영향을 받지 않도록 합니다. */
+  margin-top: 25px; /* 위쪽에 25px의 외부 여백을 추가합니다. */
+  margin-left: 20px; /* 왼쪽에 20px의 외부 여백을 추가합니다. */
+}
+#hero, #about, #record{
+  margin-left: 20px;
+}
+#about, #record{
+  margin-top: 15px;
+}
+#hero p, #about p, #record p {
+  color: #555;
+}
+
+#skills h2{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+#skills ul li{
+  margin-left: 40px;
+}
+#skills ul li:last-child{
+  margin-bottom: 10px;
+}
+#tabMenu{
+  /*float: left;
+  width: 600px;
+  height: 100%;*/
+  /*background-color: hsl(270, 75%, 50%);*/
+  float: none;
+  display: block;
+  margin-top: 10px;
+}
+#tabMenu input[type = "radio"]{
+  display: none; /* 라디오 버튼 숨김 */
+}
+#tabMenu label{
+  display: inline-block;   /* 탭을 가로로 배치*/
+  margin: 0 0;
+  padding: 15px 25Px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(0, 0%, 75%);
+  border: 1px solid transparent;
+}
+#tabMenu label:hover{
+  color: hsl(0, 0%, 13%);
+  cursor: pointer;
+}
+#tabMenu input:checked + label{
+  color: hsl(0, 75%, 48%);
+  border: 1px solid hsl(0, 0%, 82%);
+  background-color: hsl(0, 0%, 90%);
+}
+
+.skills-section{
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+}
+.skills-section h2{
+  display: none;
+}
+
+#skills ul{
+  list-style: disc;
+  margin-left: 30px;
+}
+#skills ul li{
+  font-size: 16px;
+  line-height: 2.5;
+}
+#skills-label:checked ~ #skills{
+  display: block;
+}
+/* 스크롤 애니메이션 기본 상태 */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 스크롤되면 나타나는 상태 */
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#hero {
+  background-color: hsl(220, 60%, 98%);
+  padding: 100px 20px;
+  color: hsl(220, 20%, 20%);
+  /*font-family: 'Pretendard', sans-serif;*/
+  border-bottom: 2px solid hsl(220, 10%, 90%);
+}
+
+#hero h2 {
+  /*font-size: 32px;*/
+  margin-bottom: 16px;
+}
+
+#introduce {
+  /*font-size: 18px;*/
+  color: hsl(220, 10%, 40%);
+}
+
+/* 카드형 섹션 */
+#about, #record {
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  /*font-family: 'Segoe UI', sans-serif;*/
+  color: hsl(220, 10%, 25%);
+  /*font-size: 17px;*/
+  line-height: 1.8;
+}
+/* 감성형 배경 및 텍스트 */
+/*#hero {
+  background: url("../images/space.jpg") center/cover no-repeat;
+  padding: 100px 20px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  font-family: 'Nanum Pen Script', cursive;
+  border-radius: 12px;
+}
+
+#hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#introduce {
+  font-size: 22px;
+}
+
+#about, #record {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 30px 20px;
+  padding: 30px;
+  border-radius: 16px;
+  font-family: 'Dongle', sans-serif;
+  font-size: 22px;
+  line-height: 1.8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}*/
+.timeline {
+  margin: 30px 0 0 20px;
+  border-left: 3px solid hsl(0, 0%, 70%);
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-year {
+  color: hsl(0, 75%, 50%);
+}
