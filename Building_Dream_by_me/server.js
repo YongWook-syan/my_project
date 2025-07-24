@@ -12,7 +12,7 @@ i18next
   .use(Backend)
   .use(middleware.LanguageDetector)
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'ko',
     preload: ['en', 'ko'], // 지원 언어
     backend: {
       loadPath: path.join(__dirname, '/locales/{{lng}}.json') // 번역 파일 경로
