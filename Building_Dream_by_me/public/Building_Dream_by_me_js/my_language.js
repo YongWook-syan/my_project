@@ -19,12 +19,27 @@ function updateContent() {
   document.getElementById('about-text').innerHTML = i18next.t('aboutText');
   document.getElementById('record-title').innerHTML = i18next.t('recordTitle');
   document.getElementById('record-text').innerHTML = i18next.t('recordText');
+  document.getElementById('contact').innerHTML = i18next.t('Contact');
+  document.getElementById('ending').innerHTML = i18next.t('Ending');
   document.querySelectorAll('.timeline-item').forEach(item => {
-    const index = item.getAttribute('data-index');
-    const yearText = i18next.t(`timeline.${index}.year`);
-    const mainText = i18next.t(`timeline.${index}.text`);
+    const timeline_index = item.getAttribute('data-index');
+    const yearText = i18next.t(`timeline.${timeline_index}.year`);
+    const mainText = i18next.t(`timeline.${timeline_index}.text`);
 
     item.querySelector('.timeline-year').textContent = yearText;
     item.querySelector('p').textContent = mainText;
+  });
+  document.querySelectorAll('.bottom-item').forEach(item => {
+    const bottom_index = item.getAttribute('data-index');
+    const bottomText = i18next.t(`bottomMenu.${bottom_index}`);
+
+    const link = item.querySelector('a');
+  if (link) {
+    link.textContent = bottomText;
+  } else {
+    item.textContent = bottomText;
+  }
+
+    item.querySelector('li').textContent = bottomText;
   });
 }
