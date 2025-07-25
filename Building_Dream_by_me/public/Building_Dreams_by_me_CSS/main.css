@@ -266,9 +266,3 @@ footer{
 .timeline-year {
   color: hsl(0, 75%, 50%);
 }
-#current-time {
-    font-size: 1.5rem;
-    color: #ccc;
-    font-family: monospace;
-    padding: 10px;
-  }
