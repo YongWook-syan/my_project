@@ -9,6 +9,7 @@
 .language-toggle {
     display: flex; /* 아이콘과 텍스트를 가로로 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가운데 정렬 */
     background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -17,6 +18,7 @@
     font-size: 16px;
     color: #333;
     transition: background-color 0.2s; /* 호버 시 부드러운 전환 효과 */
+    width: 110px; /* ✅ 고정 너비 적용 */
 }
 
 .language-toggle:hover {
@@ -43,6 +45,9 @@
 /* 선택된 언어 텍스트 */
 #selectedLanguageText {
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* 언어 선택 드롭다운 메뉴 (숨김 상태) */
@@ -226,4 +231,11 @@
   background: none;
   border: none;
   padding: 0;
+}
+/* 모바일 반응형 대응 */
+@media (max-width: 480px) {
+  .language-toggle {
+    width: 100px; /* 더 작게 설정 */
+    font-size: 14px;
+  }
 }
