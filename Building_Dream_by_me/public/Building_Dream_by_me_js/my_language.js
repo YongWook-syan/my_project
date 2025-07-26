@@ -39,7 +39,5 @@ function updateContent() {
   } else {
     item.textContent = bottomText;
   }
-
-    item.textContent = bottomText;  //item이 이미 li임
   });
 }
