@@ -212,6 +212,7 @@
 }
 
 .tab-button-group {
+  justify-content: center;
   display: flex;         /* 버튼들을 가로로 나열 */
   gap: 12px;             /* 버튼 사이 간격 */
   margin-left: 20px;     /* 왼쪽 여백 (디자인 맞춤) */

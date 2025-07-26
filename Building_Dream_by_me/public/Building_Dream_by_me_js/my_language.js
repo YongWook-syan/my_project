@@ -40,6 +40,6 @@ function updateContent() {
     item.textContent = bottomText;
   }
 
-    item.querySelector('li').textContent = bottomText;
+    item.textContent = bottomText;  //item이 이미 li임
   });
 }
