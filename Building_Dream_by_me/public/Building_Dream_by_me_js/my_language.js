@@ -44,5 +44,10 @@ function updateContent() {
     const side_index = item.getAttribute('data-index');
     const side_nav_Text = i18next.t(`side-nav.${side_index}`);
     item.textContent = side_nav_Text;
-  })
+  });
+  document.querySelectorAll('.floating-item').forEach(item => {
+    const floating_index = item.getAttribute('data-index');
+    const floatingText = i18next.t(`side-nav.${floating_index}`);
+    item.textContent = floatingText;
+  });
 }

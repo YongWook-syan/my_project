@@ -52,7 +52,7 @@
       <section id = "about" class = "scroll-reveal">
         <div id = "about-intro" class = "subject">
           <h2 id = "about-title">안녕하세요, 개발자를 지망하는 syan이라고 합니다!</h2>
-          <img src = "images/" alt = "profile">
+          <img id = "profile-logo" src = "../images/logo.png" alt = "profile">
           <p id = "about-text">저는 개발자를 희망하는 syan이라고 합니다. 이 웹은 제가 처음 도전하는 개인 프로젝트 입니다.<br>이 프로젝트를 시작하게 된 계기는
           군대를 가기 전에 뭐라도 하나 하고 가고 싶은데 마침 웹 개발에 관심이 있었고 그래서 한번 해 볼까 하는 마음에 시작하게 된 프로젝트 입니다.</p>
         </div>
@@ -117,13 +117,14 @@
           <li><a href="#tabMenu" class = "side-nav-item" data-index = "2">기술</a></li>
         </ul>
       </nav>
-
+      <button id = "toggleSide">≡</button>
       <!-- 하단 플로팅 메뉴 (모바일 전용) -->
       <div id="floating-menu">
         <a href="#about" class = "floating-item" data-index = "0">소개</a>
         <a href="#record" class = "floating-item" data-index = "1">기록</a>
         <a href="#tabMenu" class = "floating-item" data-index = "2">기술</a>
       </div>
+      <button id="toggleFloating">↑</button>
     <div class = "bottomMenu">
       <ul>
         <li id = "home" class = "bottom-item" data-index = "0"><a href = "index.html">메인화면</a></li>
@@ -155,6 +156,7 @@
     <script src="Building_Dream_by_me_js/i18.js"></script>
     <script src = "Building_Dream_by_me_js/my_language_button.js"></script>
     <script src = "Building_Dream_by_me_js/my_language.js"></script>
+    <script src = "Building_Dream_by_me_js/side_floating_toggle.js"></script>
     <!--<script src = "Building_Dream_by_me_js/time.js"></script>-->
   </body>
 </html>
