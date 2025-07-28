@@ -8,7 +8,7 @@ toggleFloatingBtn.addEventListener('click', () => {
 });
 
 // 모바일 제스처
-let touchStartY = 0;
+/*let touchStartY = 0;
 document.addEventListener('touchstart', (e) => {
   touchStartY = e.touches[0].clientY;
 });
@@ -29,7 +29,7 @@ document.addEventListener('touchend', (e) => {
       updateFloatingIcon();
     }
   }
-});
+});*/
 
 // 아이콘 업데이트 함수
 function updateFloatingIcon() {
