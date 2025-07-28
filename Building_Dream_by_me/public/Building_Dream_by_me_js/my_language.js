@@ -40,4 +40,9 @@ function updateContent() {
     item.textContent = bottomText;
   }
   });
+  document.querySelectorAll('.side-nav-item').forEach(item => {
+    const side_index = item.getAttribute('data-index');
+    const side_nav_Text = i18next.t(`side-nav.${side_index}`);
+    item.textContent = side_nav_Text;
+  })
 }

@@ -29,5 +29,10 @@
     "2": "ming!!"
   },
   "Contact": "Contact: yongwook2712@gmail.com",
-  "Ending": "Thank you for visiting my website. I sincerely wish you only good things in the future."
+  "Ending": "Thank you for visiting my website. I sincerely wish you only good things in the future.",
+  "side-nav": {
+    "0": "introduce",
+    "1": "record",
+    "2": "skills"
+}
 }
