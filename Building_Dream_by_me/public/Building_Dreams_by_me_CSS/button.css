@@ -18,7 +18,7 @@
     font-size: 16px;
     color: #333;
     transition: background-color 0.2s; /* 호버 시 부드러운 전환 효과 */
-    width: 110px; /* ✅ 고정 너비 적용 */
+    width: 120px; /* ✅ 고정 너비 적용 */
 }
 
 .language-toggle:hover {
@@ -235,7 +235,7 @@
 /* 모바일 반응형 대응 */
 @media (max-width: 480px) {
   .language-toggle {
-    width: 100px; /* 더 작게 설정 */
+    width: 120px; /* 더 작게 설정 */
     font-size: 14px;
   }
 }

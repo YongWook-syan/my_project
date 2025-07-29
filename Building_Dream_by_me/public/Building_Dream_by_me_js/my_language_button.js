@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedLangCode = localStorage.getItem('selectedLanguageCode') || 'ko';
     // 이전에 선택된 언어 이름이 'selectedLanguageName' 키로 localStorage에 저장되어 있다면 그 값을 사용하고, 없다면 기본값으로 '한국어'를 사용합니다.
     const savedLangName = localStorage.getItem('selectedLanguageName') || '한국어';
-              
+    
     selectedLanguageText.textContent = savedLangName; // 가져온 언어 이름을 현재 선택된 언어를 표시하는 텍스트 요소에 업데이트합니다.
     htmlElement.lang = savedLangCode; // <html> 태그의 'lang' 속성을 가져온 언어 코드로 업데이트합니다. 이는 검색 엔진 최적화(SEO) 및 스크린 리더와 같은 보조 기술에 중요한 정보를 제공합니다.
 
@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 5. 드롭다운 외부 영역 클릭 시 드롭다운을 닫는 이벤트 리스너를 추가합니다.
     document.addEventListener('click', function(event) {
-        // 클릭된 영역이 언어 토글 버튼 내부(`languageToggleButton.contains(event.target)`)도 아니고,
-        // 드롭다운 메뉴 내부(`languageOptions.contains(event.target)`)도 아닌 경우를 확인합니다.
+        // 클릭된 영역이 언어 토글 버튼 내부(languageToggleButton.contains(event.target))도 아니고,
+        // 드롭다운 메뉴 내부(languageOptions.contains(event.target))도 아닌 경우를 확인합니다.
         if (!languageToggleButton.contains(event.target) && !languageOptions.contains(event.target)) {
             languageOptions.classList.remove('show'); // 'show' 클래스를 제거하여 드롭다운을 숨깁니다.
             // ARIA 속성을 초기화하여 드롭다운이 닫힌 상태임을 알립니다.

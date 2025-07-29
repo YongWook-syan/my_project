@@ -84,14 +84,15 @@ footer {
 
 /* === 본문 영역 === */
 #container{
-  max-width: 1200px;
+  width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 #hero, #about, #record {
-  margin: 40px auto;
-  max-width: 900px;
-  padding: 40px 30px;
+  width: 100%;
+  margin: 40px 0;
+  box-sizing: border-box;
+  padding: 40px 0px;
 }
 #about, #record {
   margin-top: 15px;
@@ -196,7 +197,7 @@ footer {
   background-color: #ffffff;
   margin: 40px auto;
   padding: 40px;
-  max-width: 800px;
+  max-width: 1100px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   color: hsl(220, 10%, 25%);
@@ -307,12 +308,8 @@ footer {
   z-index: 1000;
   font-size: 14px;
 } */
-#toggleFloating,
-#floating-menu {
-  display: none;
-}
 /* === 토글 버튼 (PC에서만 보이게) === */
-#toggleSide, #toggleFloating {
+#toggleSide {
   position: fixed;
   background: #666;
   color: white;
@@ -326,11 +323,8 @@ footer {
   top: 10px;
   left: 10px;
 }
-#toggleFloating {
-  bottom: 70px;
-  right: 20px;
-}
 #floating-menu {
+  display: none;
   position: fixed;
   bottom: -100px; /* 아예 아래로 밀어버리기 */
   left: 50%;
@@ -367,19 +361,25 @@ footer {
 }
 
 #toggleFloating {
+  display: none;
   position: fixed;
   bottom: 90px;
   right: 20px;
+  width: 48px;
+  height: 48px;
   background: #616263;
   color: white;
   border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
   font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 1001;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: background 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* ✅ 고정 크기를 위해 padding 제거 */
 }
 
 #toggleFloating:hover {
@@ -395,6 +395,15 @@ footer {
     justify-content: center;
   }
   #toggleFloating {
-    display: block;
+    display: flex;
   }
 }
+@media (max-width: 1024px) {
+  #container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+/*@media screen and (max-width: 768px){
+  #
+}*/
