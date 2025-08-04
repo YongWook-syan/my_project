@@ -1,0 +1,38 @@
+{
+  "heroTitle": "Hello, welcome to my website!",
+  "introduce": "This website is my first step to shine like a star.<br>Not just receiving light, but giving it.",
+  "aboutTitle": "Hi, I'm syan aspiring to be a developer!",
+  "aboutText": "This is my first personal project.",
+  "recordTitle": "The reason I created this website.",
+  "recordText": "I’ve been interested in programming since middle school.<br>So, I entered a related major in university and, while learning C, I aimed to pursue game development or embedded programming.<br>After finishing the second semester of my first year, a certain experience sparked my interest in web and app development.<br>That led me to study HTML and Java.<br>As I continued studying, I felt the urge to accomplish something before going to the military — and that’s what led me to create this website.",
+  "timeline": {
+    "1": {
+      "year": "Middle School",
+      "text": "I first developed an interest in programming."
+    },
+    "2": {
+      "year": "University Admission",
+      "text": "My interest in programming grew as I learned the C language."
+    },
+    "3": {
+      "year": "Second Year, First Semester of University",
+      "text": "A certain experience sparked my interest in web and app development, so I began learning HTML and Java."
+    },
+    "4": {
+      "year": "Before Military Enlistment",
+      "text": "I worked on my very first personal web project."
+    }
+  },
+  "bottomMenu": {
+    "0": "home",
+    "1": "test",
+    "2": "..."
+  },
+  "Contact": "Contact: yongwook2712@gmail.com",
+  "Ending": "Thank you for visiting my website. I sincerely wish you only good things in the future.",
+  "side-nav": {
+    "0": "introduce",
+    "1": "record",
+    "2": "skills"
+}
+}

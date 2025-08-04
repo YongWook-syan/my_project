@@ -1,0 +1,426 @@
+/* ===== main.css (전체 회색 톤 스타일) ===== */
+/* === 전체 배경/텍스트 === */
+/* === 초기화 === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* === 헤더 === */
+header {
+  padding: 10px 20px;
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 20px;
+}
+#logo {
+  float: left;
+  width: 250px;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 20px;
+}
+#logo a {
+  text-decoration: none;
+  color: inherit;
+}
+#logo h1 {
+  color: #333;
+}
+
+/* === 푸터 === */
+footer {
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid hsl(0, 0%, 10%);
+}
+.bottomMenu {
+  width: 100%;
+  height: 20px;
+  position: relative;
+}
+.bottomMenu ul {
+  margin-top: 15px;
+}
+.bottomMenu ul li {
+  float: left;
+  padding: 5px 20px;
+  border-right: 1px solid hsl(0, 0%, 80%);
+  list-style: none;
+}
+.bottomMenu ul li:last-child {
+  border-right: none;
+}
+.bottomMenu ul li a,
+.bottomMenu ul li a:visited {
+  text-decoration: none;
+  color: hsl(0, 0%, 40%);
+}
+#sns {
+  position: absolute;
+  right: 0;
+}
+#sns ul li {
+  border: none;
+  padding: 5px;
+}
+#company,
+#Ending-greeting {
+  clear: left;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+/* === 본문 영역 === */
+#container{
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#hero, #about, #record {
+  width: 100%;
+  margin: 40px 0;
+  box-sizing: border-box;
+  padding: 40px 0px;
+}
+#about, #record {
+  margin-top: 15px;
+}
+#hero p, #about p, #record p {
+  color: #555;
+}
+
+#profile-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* === 사용 언어 탭 === */
+#skills h2 {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+#skills ul li {
+  margin-left: 40px;
+}
+#skills ul li:last-child {
+  margin-bottom: 10px;
+}
+#tabMenu {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  float: none;
+  display: block;
+  margin-top: 10px;
+}
+#tabMenu input[type="radio"] {
+  display: none;
+}
+#tabMenu label {
+  display: inline-block;
+  margin: 0 0;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(0, 0%, 75%);
+  border: 1px solid transparent;
+}
+#tabMenu label:hover {
+  color: hsl(0, 0%, 13%);
+  cursor: pointer;
+}
+#tabMenu input:checked + label {
+  /*color: hsl(0, 75%, 48%);*/
+  border: 1px solid hsl(0, 0%, 82%);
+  background-color: hsl(0, 0%, 90%);
+}
+.skills-section {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+}
+.skills-section h2 {
+  display: none;
+}
+#skills ul {
+  list-style: disc;
+  margin-left: 30px;
+}
+#skills ul li {
+  font-size: 16px;
+  line-height: 2.5;
+}
+#skills-label:checked ~ #skills {
+  display: block;
+}
+
+/* === 스크롤 애니메이션 === */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === hero 영역 === */
+#hero {
+  background-color: hsl(220, 60%, 98%);
+  padding: 100px 20px;
+  color: hsl(220, 20%, 20%);
+  border-bottom: 2px solid hsl(220, 10%, 90%);
+}
+#hero h2 {
+  margin-bottom: 16px;
+}
+#introduce {
+  color: hsl(220, 10%, 40%);
+}
+
+/* === 카드형 섹션 === */
+#about, #record {
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 1100px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  color: hsl(220, 10%, 25%);
+  line-height: 1.8;
+}
+
+/* === 타임라인 === */
+.timeline {
+  margin: 30px 0 0 20px;
+  border-left: 3px solid hsl(0, 0%, 70%);
+  padding-left: 20px;
+  position: relative;
+}
+.timeline-item {
+  margin-bottom: 25px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease-out;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.timeline-year {
+  color: hsl(220, 60%, 40%);
+}
+#current-time {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 0%);
+  font-family: monospace;
+  padding: 10px;
+}
+
+/* === 사이드바 (PC) === */
+#side-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: rgba(50, 50, 50, 0.95); /* 살짝 투명 */
+  backdrop-filter: blur(6px);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease, box-shadow 0.3s;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+  z-index: 999;
+  padding-top: 60px;
+}
+#side-nav.active {
+  transform: translateX(0);
+}
+
+#side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 20px;
+}
+#side-nav li {
+  margin: 18px 0;
+}
+#side-nav a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+#side-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #00acee;
+  transform: translateX(4px);
+}
+
+#toggleSide {
+  display: block;
+  top: 10px;
+  left: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: background 0.3s ease;
+}
+#toggleSide:hover {
+  background: #555;
+}
+
+/* === 하단 플로팅 메뉴 (모바일) === */
+/*#floating-menu {
+  display: none; /* PC에선 안 보임 
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 10px 20px;
+  z-index: 1000;
+  font-size: 14px;
+} */
+/* === 토글 버튼 (PC에서만 보이게) === */
+#toggleSide {
+  position: fixed;
+  background: #666;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+#toggleSide {
+  top: 10px;
+  left: 10px;
+}
+#floating-menu {
+  display: none;
+  position: fixed;
+  bottom: -100px; /* 아예 아래로 밀어버리기 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 12px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: bottom 0.4s ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  z-index: 1000;
+  font-size: 16px;
+}
+
+#floating-menu.active {
+  bottom: 20px; /* 슬라이드 올라옴 */
+}
+#floating-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#floating-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+#toggleFloating {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: #616263;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* ✅ 고정 크기를 위해 padding 제거 */
+}
+
+#toggleFloating:hover {
+  background: #005fa3;
+}
+/* === 반응형 조건 === */
+@media (max-width: 768px) {
+  #container {
+    padding: 0 16px;
+  }
+  #hero, #about, #record {
+    padding: 20px 0;
+  }
+  #hero h2, #about h2, #record h4 {
+    font-size: 1.5rem;
+    margin-left: 14px;
+    /*text-align: center;*/
+  }
+  #hero p, #about p{
+    font-size: 1rem;
+    margin-left: 14px;
+    /*text-align: center;*/
+  }
+  #toggleSide, #side-nav {
+    display: none;  /* 모바일에선 사이드 메뉴 숨김 */
+  }
+  #floating-menu {
+    display: flex;  /* 모바일에선 플로팅 메뉴 표시 */
+    justify-content: center;
+  }
+  #toggleFloating {
+    display: flex;
+  }
+}
+@media (max-width: 1024px) {
+  #container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+/*@media screen and (max-width: 768px){
+  #
+}*/
