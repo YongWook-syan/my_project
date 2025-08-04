@@ -1,0 +1,39 @@
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* 모든 단락 (p) 요소의 스타일입니다. */
+p{
+  font-size: 15px; /* 글꼴 크기를 15px로 설정합니다. */
+  color: hsl(0, 0%, 45%); /* 글자색을 중간 밝기의 회색으로 설정합니다 (HSL 색상 코드 사용). */
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited{
+  font-size: 15px; /* 글꼴 크기를 15px로 설정합니다. */
+}
+/* 로고 제목 (h1)의 스타일입니다. */
+#logo h1{
+  font-family: "Nanum Pen Script", cursive; /* 글꼴을 '나눔 펜 스크립트'로 설정하고, 없으면 필기체로 대체합니다. */
+  font-weight: 700; /* 글꼴 두께를 굵게(700) 설정합니다. */
+  font-size: 40px; /* 글꼴 크기를 40px로 설정합니다. */
+  color: hsl(0, 0%, 100%); /* 글자색을 흰색으로 설정합니다 (HSL 색상 코드 사용). */
+  text-shadow: 0 -1px 0 hsl(0, 0%, 17%); /* 텍스트 그림자를 설정합니다. (오프셋-x 0, 오프셋-y -1px, 블러 0, 색상 어두운 회색) */
+}
+
+#hero {
+  font-family: 'Pretendard', sans-serif;
+}
+#hero h2{
+  font-size: 32px;
+}
+#introduce {
+  font-size: 18px;
+}
+#about, #record {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 17px;
+}
+.timeline-year{
+  font-weight: bold;
+  font-size: 18px;
+}
